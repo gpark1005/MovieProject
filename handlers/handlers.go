@@ -37,7 +37,7 @@ func PostNewMovie(w http.ResponseWriter, r *http.Request) {
 	movieDb := repo.Db{}
 	movieDb.PutToDb(mv)
 
-	movieBytes, err := json.MarshalIndent(movieDb, "", "	")
+	movieBytes, err := json.Marshal(movieDb, "", "	")
 	if err != nil {
 		fmt.Println(err)
 	}
