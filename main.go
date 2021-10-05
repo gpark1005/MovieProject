@@ -19,8 +19,8 @@ func main() {
 
 	repository := repo.NewRepo(file)
 	srv := service.ForService(repository)
-	mvHandler := handlers.NewMovieHandler(srv)
-	router := handlers.ConfigureRouter
+	handler := handlers.NewMovieHandler(srv)
+	router := handlers.ConfigureRouter(handler)
 
 	server := &http.Server{
 		Handler: router,

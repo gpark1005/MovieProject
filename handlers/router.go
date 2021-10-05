@@ -5,12 +5,12 @@ import (
 )
 
 func ConfigureRouter(handler MovieHandler) *mux.Router {
-	r := mux.NewRouter()
+	router := mux.NewRouter()
 
-	r.HandleFunc("/movie", handler.PostNewMovie).Methods("POST")
-	r.HandleFunc("/movie", handler.GetMovieHandler).Methods("GET")
-	r.HandleFunc("/movie/{Id}", handler.GetById).Methods("GET")
-	r.HandleFunc("/movie/{Id}", handler.DeleteMovie).Methods("DELETE")
+	router.HandleFunc("/movie", handler.PostNewMovie).Methods("POST")
+	router.HandleFunc("/movie", handler.GetMovieHandler).Methods("GET")
+	router.HandleFunc("/movie/{Id}", handler.GetById).Methods("GET")
+	router.HandleFunc("/movie/{Id}", handler.DeleteMovie).Methods("DELETE")
 
-	return r
+	return router
 }
