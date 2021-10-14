@@ -1,10 +1,10 @@
 package service
 
 import (
-	"github.com/gpark1005/MovieProject/entities"
-	"github.com/gpark1005/MovieProject/repository"
 	"errors"
 	"github.com/google/uuid"
+	"github.com/gpark1005/MovieProject/entities"
+	"github.com/gpark1005/MovieProject/repository"
 )
 
 type Service struct {

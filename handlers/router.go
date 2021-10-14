@@ -11,7 +11,7 @@ func ConfigureRouter(handler MovieHandler) *mux.Router {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/movie", handler.PostMovieHandler).Methods("POST")
-	r.HandleFunc("/movie/{id}", handler.PostMovieHandler).Methods("POST")
+	r.HandleFunc("/movie/{id}", handler.GetMovieHandler).Methods("GET")
 
 	return r
 
