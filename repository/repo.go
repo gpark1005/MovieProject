@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/gpark1005/MovieProject/entities"
 	"encoding/json"
+	"github.com/gpark1005/MovieProject/entities"
 	"io/ioutil"
 )
 

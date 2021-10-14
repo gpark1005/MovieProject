@@ -1,9 +1,9 @@
 package handlers
 
 import (
+	"encoding/json"
 	"github.com/gpark1005/MovieProject/entities"
 	"github.com/gpark1005/MovieProject/service"
-	"encoding/json"
 	"net/http"
 )
 
@@ -39,4 +39,8 @@ func (mh MovieHandler) PostMovieHandler(w http.ResponseWriter, r *http.Request) 
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusCreated)
 
+}
+
+func (mh MovieHandler) GetMovieHandler(w http.ResponseWriter, r *http.Request) {
+	return
 }
