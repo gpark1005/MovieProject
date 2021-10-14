@@ -8,6 +8,9 @@ type Server struct {
 }
 
 func ConfigureRouter(handler MovieHandler) *mux.Router {
+// Some other random lines
+	// Some other random lines
+	// Some other random lines
 	r := mux.NewRouter()
 
 	r.HandleFunc("/movie", handler.PostMovieHandler).Methods("POST")
